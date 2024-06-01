@@ -1,4 +1,4 @@
-name: Build
+name: FizzBuzz CI/CD
 
 on:
     push:
@@ -14,12 +14,12 @@ jobs:
 
         steps:
           - name: Checkout repository
-            uses: actions/checkout@v2
+            uses: actions/checkout@v4
 
           - name: Setup .NET Core
-            uses: actions/setup-dotnet@v1
+            uses: actions/setup-dotnet@v4
             with:
-                dotnet-version: '8.1'
+                dotnet-version: 8.x
 
           - name: Restore dependencies
             run: |
