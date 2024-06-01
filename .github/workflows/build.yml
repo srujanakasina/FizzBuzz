@@ -1,0 +1,35 @@
+name: Build
+
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+            uses: actions/checkout@v2
+
+        - name: Setup .NET Core
+            uses: actions/setup-dotnet@v1
+            with:
+                dotnet-version: '3.1' # Replace with your desired .NET Core version
+
+        - name: Restore dependencies
+            run: dotnet restore
+
+        - name: Build project
+          run: | 
+            cd src
+            dotnet build --configuration Release
+
+        - name: Run tests
+          run: |
+            cd src
+            dotnet test --configuration Release --no-build
