@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FizzBuzzModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <h1 id="page-header" class="display-4">FizzBuzz Results</h1>
+    <table class="display table table-striped table-bordered dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th>Input</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(mi => item.Input)</td>
+                    <td>@Html.DisplayFor(mi => item.Result)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
