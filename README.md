@@ -63,4 +63,4 @@ dotnet test
 #### Running in Visual Studio
 Use test explorer to run these tests with in visual studio
 
-![Tests](documentation\images\testexplorer.png)
+![Tests](documentation/images/testexplorer.png)
