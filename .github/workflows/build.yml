@@ -43,9 +43,12 @@ jobs:
         steps:
           - name: Checkout repository
             uses: actions/checkout@v4
-
+          
+          - name: Set up QEMU
+            uses: docker/setup-qemu-action@v3
+          
           - name: Setup Docker buildx
-            uses: docker/setup-dockerbuildx-action@v2
+            uses: docker/setup-dockerbuildx-action@v3
 
           - name: Login to Docker Hub
             uses: docker/login-action@v3
