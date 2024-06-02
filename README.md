@@ -1,7 +1,7 @@
 # FizzBuzz Overview
 FizzBuzz projects which takes in an input array and generate output based on certain rules.
 
-![FizzBuzz Home](documentation/image/fizzbuzz_home.png)
+![FizzBuzz Home](documentation/images/fizzbuzz_home.png)
 
 ### Assumptions
 * Input is not sent from the UI, instead a hard coded array with the inputs from the assignment are hard coded in HomeController.
